@@ -11,7 +11,6 @@
   <link rel="icon" type="image/x-icon" href="<?= base_url('assets/images/favicon.ico') ?>">
   <link rel="stylesheet" href="<?= base_url('assets/') ?>dist/css/adminlte.css">
 </head>
-
 <body class="hold-transition register-page">
    <!-- Preloader -->
    <div class="preloader flex-column justify-content-center align-items-center">
@@ -21,7 +20,7 @@
     </div>
   <div class="container mt-5">
     <div class="row justify-content-center">
-      <div class="col-md-10">
+      <div class="col-md-12">
         <div class="card shadow-lg">
           <div class="card-body register-card-body">
             <div class="text-center">
@@ -30,59 +29,55 @@
               <p>Scholarship Management System</p>
             </div>
             <h6 class="register-box-msg mb-2">Account Registration</h6>
-
             <!-- Display success or error messages -->
             <?php if ($this->session->flashdata('success')): ?>
               <div class="alert text-center alert-success">
                 <?= $this->session->flashdata('success'); ?>
               </div>
             <?php endif; ?>
-
             <?php if ($this->session->flashdata('error')): ?>
               <div class="alert text-center alert-danger">
                 <?= $this->session->flashdata('error'); ?>
               </div>
             <?php endif; ?>
-
             <form action="<?= site_url('applicant/register'); ?>" method="post">
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                   <div class="form-group">
                     <label for="id_number">ID Number <span class="text-danger">*</span></label>
                     <input type="text" class="form-control <?= form_error('id_number') ? 'is-invalid' : ''; ?>" id="id_number" name="id_number" placeholder="ID Number" value="<?= set_value('id_number'); ?>">
                     <?= form_error('id_number', '<div class="invalid-feedback">', '</div>'); ?>
-
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                   <div class="form-group">
                     <label for="firstname">First name: <span class="text-danger">*</span></label>
                     <input type="text" class="form-control <?= form_error('firstname') ? 'is-invalid' : ''; ?>" id="firstname" name="firstname" placeholder="First Name" value="<?= set_value('firstname'); ?>">
                     <?= form_error('firstname', '<div class="invalid-feedback">', '</div>'); ?>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                   <div class="form-group">
                     <label for="middlename">Middle name: </label>
                     <input type="text" class="form-control <?= form_error('middlename') ? 'is-invalid' : ''; ?>" id="middlename" name="middlename" placeholder="Middle Name" value="<?= set_value('middlename'); ?>">
                     <?= form_error('middlename', '<div class="invalid-feedback">', '</div>'); ?>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                   <div class="form-group">
                     <label for="lastname">Last name: <span class="text-danger">*</span></label>
                     <input type="text" class="form-control <?= form_error('lastname') ? 'is-invalid' : ''; ?>" id="lastname" name="lastname" placeholder="Last Name" value="<?= set_value('lastname'); ?>">
                     <?= form_error('lastname', '<div class="invalid-feedback">', '</div>'); ?>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                   <div class="form-group">
                     <label for="birthdate">Birthdate <span class="text-danger">*</span></label>
                     <input type="date" class="form-control <?= form_error('birthdate') ? 'is-invalid' : ''; ?>" id="birthdate" name="birthdate" placeholder="Birthdate" value="<?= set_value('birthdate'); ?>" max="<?= date('Y-m-d'); ?>">
                     <?= form_error('birthdate', '<div class="invalid-feedback">', '</div>'); ?>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                   <div class="form-group">
                     <label for="gender">Gender <span class="text-danger">*</span></label>
                     <div class="d-flex">
@@ -102,21 +97,23 @@
                     <?= form_error('gender', '<div class="invalid-feedback">', '</div>'); ?>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                   <div class="form-group">
                     <label for="contact">Contact <span class="text-danger">*</span></label>
                     <input type="number" class="form-control <?= form_error('contact') ? 'is-invalid' : ''; ?>" id="contact" name="contact" placeholder="Contact" value="<?= set_value('contact'); ?>">
                     <?= form_error('contact', '<div class="invalid-feedback">', '</div>'); ?>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                   <div class="form-group">
                     <label for="email">Email <span class="text-danger">*</span></label>
                     <input type="email" class="form-control <?= form_error('email') ? 'is-invalid' : ''; ?>" id="email" name="email" placeholder="Email" value="<?= set_value('email'); ?>">
                     <?= form_error('email', '<div class="invalid-feedback">', '</div>'); ?>
                   </div>
                 </div>
-                <div class="col-md-4">
+              </div>
+              <div class="row">
+              <div class="col-md-3">
                   <div class="form-group">
                     <label for="program_type">Program Type <span class="text-danger">*</span></label>
                     <select class="form-control <?= form_error('program_type') ? 'is-invalid' : ''; ?>" id="program_type" name="program_type" onchange="updateYearOptions(); updateProgramOptions();"">
@@ -129,13 +126,7 @@
                     <?= form_error('program_type', '<div class="invalid-feedback">', '</div>'); ?>
                   </div>
                 </div>
-
-              </div>
-              <div class="row">
-               
-              </div>
-              <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-3">
                   <div class="form-group">
                     <label for="year">Year Level <span class="text-danger">*</span></label>
                     <select class="form-control <?= form_error('year') ? 'is-invalid' : ''; ?>" id="year" name="year">
