@@ -13,16 +13,19 @@
 </head>
 
 <body class="hold-transition register-page">
-  <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="<?= base_url('assets/') ?>images/logo-preloader.png" alt="sms-logo" height="230" width="230">
-  </div>
+   <!-- Preloader -->
+   <div class="preloader flex-column justify-content-center align-items-center">
+      <img class="animation__shake" src="<?= base_url('assets/') ?>images/logo.svg" alt="sms-logo" style="max-width: 250px;">
+      <h5 class="mt-2 mb-0">Divine Word College of Calapan</h5>
+      <p>Scholarship Management System</p>
+    </div>
   <div class="container mt-5">
     <div class="row justify-content-center">
       <div class="col-md-10">
         <div class="card shadow-lg">
           <div class="card-body register-card-body">
             <div class="text-center">
-              <img src="<?= base_url('assets/images/logo.png'); ?>" alt="Logo" class="img-fluid mb-2" style="max-width: 130px;">
+              <img src="<?= base_url('assets/images/logo.svg'); ?>" alt="Logo" class="img-fluid mb-2" style="max-width: 130px;">
               <h5 class="mt-2 mb-0">Divine Word College of Calapan</h5>
               <p>Scholarship Management System</p>
             </div>

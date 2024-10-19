@@ -21,7 +21,9 @@
         <div class="card">
             <div class="card-header">
                 <div class="text-center">
-                    <img src="<?= base_url('assets/images/logo-preloader.png'); ?>" alt="Logo" class="img-fluid" style="max-width: 250px;">
+                    <img src="<?= base_url('assets/images/logo.svg'); ?>" alt="Logo" class="img-fluid" style="max-width: 130px;">
+                    <h5 class="mt-2 mb-0">Divine Word College of Calapan</h5>
+                    <p>Scholarship Management System</p>
                     <p class="mb-0 mt-3 font-weight-bold">EDIT APPLICATION FORM</p>
                 </div>
             </div>
