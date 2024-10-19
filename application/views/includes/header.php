@@ -33,7 +33,9 @@
 <div class="wrapper">
    <!-- Preloader -->
    <div class="preloader flex-column justify-content-center align-items-center">
-      <img class="animation__shake" src="<?= base_url('assets/') ?>images/logo-preloader.png" alt="sms-logo" height="230" width="230">
+      <img class="animation__shake" src="<?= base_url('assets/') ?>images/logo.svg" alt="sms-logo" style="max-width: 250px;">
+      <h5 class="mt-2 mb-0">Divine Word College of Calapan</h5>
+      <p>Scholarship Management System</p>
     </div>
 
   <!-- Navbar -->

@@ -17,7 +17,7 @@
     <div class="card">
       <div class="card-body register-card-body">
         <div class="text-center">
-          <img src="<?= base_url('assets/images/logo.png'); ?>" alt="Logo" class="img-fluid mb-2" style="max-width: 130px;">
+          <img src="<?= base_url('assets/images/logo.svg'); ?>" alt="Logo" class="img-fluid mb-2" style="max-width: 130px;">
           <h5 class="mt-2 mb-0">Divine Word College of Calapan</h5>
           <p>Scholarship Management System</p>
         </div>
