@@ -7,7 +7,7 @@
     <title>Unauthorized Access</title>
 </head>
 <body>
-    <h1>Unauthorized Access</h1>
+    
     <p>You do not have permission to access this page.</p>
     <a href="<?php echo site_url('auth/login'); ?>">Go to Login</a>
 </body>
